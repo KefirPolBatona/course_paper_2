@@ -35,6 +35,7 @@ class Output:
         Преобразует формат даты
         """
         self.date = self.date.strftime("%d.%m.%Y")
+        return self.date
 
 
     def define_amount(self):
@@ -42,6 +43,7 @@ class Output:
         Определяет аргумент amount
         """
         self.amount = self.operationAmount["amount"]
+        return self.amount
 
 
     def define_currency_name(self):
@@ -49,6 +51,8 @@ class Output:
         Определяет аргумент currency_name
         """
         self.currency_name = self.operationAmount["currency"]["name"]
+        return self.currency_name
+
 
     def define_from_name(self):
         """
@@ -59,6 +63,7 @@ class Output:
             self.from_name = temporary[0]
         else:
             self.from_name = " ".join(temporary)
+        return self.from_name
 
 
     def define_from_number_hidden(self):
@@ -69,6 +74,7 @@ class Output:
         temporary_2 = temporary_1[:6] + "******" + temporary_1[-4:]
         self.from_number_hidden = temporary_2[:4] + " " + temporary_2[4:8] + " "\
                                   + temporary_2[8:12] + " " + temporary_2[12:]
+        return self.from_number_hidden
 
 
     def define_to_name(self):
@@ -80,6 +86,7 @@ class Output:
             self.to_name = temporary[0]
         else:
             self.to_name = " ".join(temporary)
+        return self.to_name
 
 
     def define_to_number_hidden(self):
@@ -88,6 +95,7 @@ class Output:
         """
         temporary = self.to.split()[-1]
         self.to_number_hidden = "**" + temporary[-4:]
+        return self.to_number_hidden
 
 
     def __repr__(self):
