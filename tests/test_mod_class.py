@@ -1,6 +1,5 @@
 import pytest
 import datetime
-# from src import mod_class
 from src.mod_class import Output
 
 @pytest.fixture

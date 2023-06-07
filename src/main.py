@@ -90,8 +90,4 @@ def output():
 
 output()
 
-# print(output_operations)
-print(list_operations_chronology)
-
-
 ##################
